@@ -30,6 +30,7 @@ def send_data():
                 print(data)
                 time.sleep(0.2)
                 producer.send('custommon', bytes(data, 'utf-8'))
+                producer.flush()
                                 
                 #f.close()
 
